@@ -1,0 +1,25 @@
+// Mage.cs
+using System;
+
+namespace MagicalInheritance
+{
+  class Mage : Pupil
+  {
+    //Mage constructor that calls the base constructor with the same parameter
+    public Mage(string title) : base(title)
+    {
+     }
+
+     //spell method for rain storm
+     public virtual Storm CastRainStorm()
+     {
+       Storm rainSpell = new Storm("rain", false, Title);
+       return rainSpell;
+     }
+
+
+
+
+
+  }
+}
