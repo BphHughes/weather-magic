@@ -1,0 +1,29 @@
+// Pupil.cs
+using System;
+
+namespace MagicalInheritance
+{
+  class Pupil
+  {
+    public string Title
+    {
+      get ; private set;
+    }
+
+    //constructor for Pupil class
+    public Pupil(string title)
+    {
+      Title = title;
+    }
+
+    //method for Pupil's spell which creates and new storm object and returns it
+    public Storm CastWindStorm()
+    {
+      Storm spell = new Storm("wind", false, Title);
+      return spell;
+    }
+
+
+  }
+  
+}
