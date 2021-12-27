@@ -1,0 +1,47 @@
+/ Storm.cs
+using System;
+
+namespace MagicalInheritance
+{
+  class Storm
+  {
+    //properties for Essence - wind or rain, IsStrong - is storm strong or weak, and Caster - magician name
+    public string Essence
+    {
+      get; private set;
+    }
+
+    public bool IsStrong
+    {
+      get; private set;
+    }
+
+    public string Caster
+    {
+      get; private set;
+    }
+
+    //constructor 3 parameters
+    public Storm(string essence, bool isstrong, string caster)
+    {
+      Essence = essence;
+      IsStrong = isstrong;
+      Caster = caster;
+    }
+
+    //method for announcing Storm object
+    public string Announce()
+    {
+      string strength;
+      if (IsStrong == true)
+        { strength = "strong";}
+      else
+        { strength = "weak";}
+
+      string announcement = $"{Caster} has cast a {strength} {Essence} storm!";
+      return announcement;
+    }
+
+
+  }
+}
